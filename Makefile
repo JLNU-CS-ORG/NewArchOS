@@ -23,7 +23,7 @@ GDB     := gdb
 GDBOPTS  =
 GDBPORT := 26000
 QEMU := qemu-system-i386
-QEMUOPTS = -drive file=Image/kernel.img,index=0,media=disk,format=raw
+QEMUOPTS = -drive file=Image/kernel.img,index=0,media=disk,format=raw -m 4G
 QEMUDBG += -serial mon:stdio -gdb tcp::$(GDBPORT) -S -D Qemu.Log
 
 all: kernel.img

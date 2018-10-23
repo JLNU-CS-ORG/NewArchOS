@@ -2,7 +2,7 @@
 KERN_OBJS = kernel/lib/kstring.o kernel/lib/kprintf.o \
 	Object/entry.o Object/entrypgdir.o	 \
 	Object/init.o Object/console.o	 \
-
+	Object/rtc_clock.o
 Object/entry.o: kernel/entry.S
 	@mkdir -p Object
 	$(CC) $(CFLAGS) $< -o $@ 
@@ -14,7 +14,10 @@ Object/console.o: kernel/console.c
 	$(CC) $(CFLAGS) $< -Os -o $@
 Object/entrypgdir.o: kernel/entrypgdir.c
 	@mkdir -p Object
-	$(CC) $(CFLAGS) $< -Os -o $@	
+	$(CC) $(CFLAGS) $< -Os -o $@
+Object/rtc_clock.o: kernel/rtc_clock.c
+	@mkdir -p Object
+	$(CC) $(CFLAGS) $< -Os -o $@
 kernel/lib/%.o: kernel/lib/%.c
 	@mkdir -p Object
 	$(CC) $(CFLAGS) $^ -Os -o $@ 

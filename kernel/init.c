@@ -9,6 +9,7 @@
 #include <include/ninix/console.h>
 #include <include/ninix/kstdio.h>
 #include <include/ninix/interrupt.h>
+#include <include/ninix/rtc_clock.h>
 
 void kpanic(const char *msg);
 void i386_init(void)
@@ -18,15 +19,11 @@ void i386_init(void)
 	memset(edata, 0, end - edata);
 
 	console_init();
-	int ret = kputs(KERN_WARNING, "Testing CGA.\n");
-	if (ret) 
-		kputs(KERN_INFO, "Test successful.\n\n"
-		"Welcome into NINIX kernel!\n"); 	
-#if 1
+#if 0
 	/* Shouldn't got here */
 	kpanic("Just a debug information, disabled it!\n");
 #endif 
-		
+	i386_find_memory();
 }
 
 void kpanic(const char *msg)

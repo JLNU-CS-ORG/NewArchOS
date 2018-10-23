@@ -68,7 +68,7 @@ gdt_desc:
 	.quad   0x00cf98000000ffff	/* code gdt descriptor */	
 	.quad   0x00cf92000000ffff  	/* data gdt descriptor */
 boot_info:
-	.string "\r\nBooting the kernel!!\r\n\r\n"
+	.string "\r\nBooting the kernel!!\r\n"
 	info_len = . - boot_info - 1 
 died_info:
 	.string "I'm sorry your kernel already died\r\n"
