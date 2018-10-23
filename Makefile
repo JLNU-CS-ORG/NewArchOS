@@ -17,7 +17,7 @@ VPATH  = include
 
 LDFLAGS += -m elf_i386 
 
-OBJS   = Object/boot.o Object/setup.o 
+OBJS   = Object/boot.o Object/setup.o kernel/lib/*.o kernel/lib/*.d
 
 GDB     := gdb 
 GDBOPTS  =

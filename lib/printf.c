@@ -6,21 +6,3 @@
  */
 
 #include <include/usr/stdio.h>
-
-#define putchar(c) 	cga_putc(c)
-
-inline int puts(const char *s)
-{
-	int ret = 0; 
-	while (*s != '\0') {
-		putchar(*s);
-		s++;
-		ret++;
-	}
-	return ret; 	/* return strlen(puts) */
-}
-
-int printf(const char *fmt, ...)
-{
-	
-}
