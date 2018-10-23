@@ -1,0 +1,25 @@
+
+KERN_OBJS = Object/entry.o Object/entrypgdir.o	 \
+	Object/init.o Object/console.o	 \
+	lib/string.o lib/printf.o 
+
+Object/entry.o: kernel/entry.S
+	@mkdir -p Object
+	$(CC) $(CFLAGS) $< -o $@ 
+Object/init.o: kernel/init.c
+	@mkdir -p Object 
+	$(CC) $(CFLAGS) $< -Os -o $@
+Object/console.o: kernel/console.c
+	@mkdir -p Object
+	$(CC) $(CFLAGS) $< -Os -o $@
+Object/entrypgdir.o: kernel/entrypgdir.c
+	@mkdir -p Object
+	$(CC) $(CFLAGS) $< -Os -o $@
+	
+lib/%.o: lib/%.c
+	@mkdir -p Object
+	$(CC) $(CFLAGS) $^ -Os -o $@ 
+Image/kernel: $(KERN_OBJS)
+	@mkdir -p Image 
+	$(LD) $(LDFLAGS) -T kernel/kernel.ld $^ -o $@ -b binary
+	@objdump -S $@ > $@.asm
