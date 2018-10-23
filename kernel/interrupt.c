@@ -5,6 +5,6 @@
  * time     : Sun 21 Oct 2018 05:45:47 PM CST
  */
 
-#include <include/interrupt.h>
+#include <include/ninix/interrupt.h>
 
 

@@ -5,8 +5,8 @@
  * time     : Thu 18 Oct 2018 03:27:32 PM CST
  */
 
-#ifndef _TYPES_H
-#define _TYPES_H
+#ifndef _K_TYPES_H
+#define _K_TYPES_H
 
 typedef unsigned char 	uint8_t;
 typedef unsigned short 	uint16_t;

@@ -8,8 +8,8 @@
  * Then jump into kernel entry.
  * Written by Yu Liu. 
  */
-#include <include/inline-asm.h>
-#include <include/elf.h>
+#include <include/ninix/inline-asm.h>
+#include <include/ninix/elf.h>
 
 #define wait_disk() 				\
 { 		   			        \

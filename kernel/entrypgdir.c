@@ -1,6 +1,6 @@
-#include <include/mmu.h>
+#include <include/ninix/mmu.h>
 //#include <inc/memlayout.h>
-#include <include/types.h>
+#include <include/ninix/ktypes.h>
 
 pte_t entry_pgtable[PTE_ENTRIES];
 

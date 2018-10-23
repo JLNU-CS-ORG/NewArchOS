@@ -5,7 +5,7 @@
  * time     : Thu 18 Oct 2018 03:25:17 PM CST
  */
 
-#include "types.h"
+#include "ktypes.h"
 
 static inline 
 void outb(int port, uint8_t data)

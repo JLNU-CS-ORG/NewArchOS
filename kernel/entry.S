@@ -4,7 +4,7 @@
  * email    : <ilhanwnz@hotmail.com>
  * time     : Thu 18 Oct 2018 03:59:09 PM CST
  */
-#include <include/mmu.h>
+#include <include/ninix/mmu.h>
 
 #define RELOCATE(x)		((x) - KERNEL_BASE)
 

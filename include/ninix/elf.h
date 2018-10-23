@@ -8,7 +8,7 @@
 #ifndef _ELF_H
 #define _ELF_H
 
-#include <include/types.h>
+#include "ktypes.h"
 /* little-endian, "FLE 0x7f"
  * 		  "0x46 0x4c 0x45 0x7f"
  */ 

@@ -1,7 +1,7 @@
 
-KERN_OBJS = Object/entry.o Object/entrypgdir.o	 \
+KERN_OBJS = kernel/lib/kstring.o kernel/lib/kprintf.o \
+	Object/entry.o Object/entrypgdir.o	 \
 	Object/init.o Object/console.o	 \
-	lib/string.o lib/printf.o 
 
 Object/entry.o: kernel/entry.S
 	@mkdir -p Object
@@ -14,9 +14,8 @@ Object/console.o: kernel/console.c
 	$(CC) $(CFLAGS) $< -Os -o $@
 Object/entrypgdir.o: kernel/entrypgdir.c
 	@mkdir -p Object
-	$(CC) $(CFLAGS) $< -Os -o $@
-	
-lib/%.o: lib/%.c
+	$(CC) $(CFLAGS) $< -Os -o $@	
+kernel/lib/%.o: kernel/lib/%.c
 	@mkdir -p Object
 	$(CC) $(CFLAGS) $^ -Os -o $@ 
 Image/kernel: $(KERN_OBJS)

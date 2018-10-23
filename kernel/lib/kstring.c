@@ -5,7 +5,7 @@
  * time     : Tue 16 Oct 2018 08:07:17 PM CST
  */
 
-#include <include/usr/string.h>
+#include <include/ninix/kstring.h>
 
 int strlen(const char *str)
 {

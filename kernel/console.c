@@ -5,7 +5,7 @@
  * time     : Fri 19 Oct 2018 04:26:12 PM CST
  */
 
-#include <include/console.h>
+#include <include/ninix/console.h>
 
 static uint8_t font_attr = 0;
 void console_init(void)
@@ -38,6 +38,7 @@ void cga_init()
 void cga_putc(int c)
 {
 	/* Current only used default attribute */
+
 	if (!(font_attr & 0xff))
 		c |= 0x0700;
 	else

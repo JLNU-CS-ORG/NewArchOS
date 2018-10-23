@@ -8,9 +8,9 @@
 #ifndef _CONSOLE_H
 #define _CONSOLE_H
 
-#include <include/types.h>
-#include <include/inline-asm.h>
-#include <include/mmu.h>
+#include "ktypes.h" 
+#include "inline-asm.h"
+#include "mmu.h"
 
 #define CGA_BASE 	0x3d4
 #define CGA_BUF 	0xb8000
@@ -38,5 +38,13 @@ void serial_init(void);
 void cga_putc(int c);
 
 #define FONT_ERR 	0x04
+#define FONT_DEF 	0x07
+
 void cga_set_attribute(int attr);
+
+enum cons_stat {
+	KERN_DEFAULT,
+	KERN_WARNING,
+	KERN_INFO, 
+};
 #endif
