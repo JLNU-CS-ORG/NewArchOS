@@ -5,7 +5,7 @@ Daydreaming a senior student. But it's not "Daydreaming", because i think it's n
 
 Now, So i have a lot of knowledge that i can finish this project. 
 
-Hiahia (-:, by the way, this project can be used as my paper!
+Hiahia :-), by the way, this project can be used as my paper!
 
 Update: 
 
