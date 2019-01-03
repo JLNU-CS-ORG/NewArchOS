@@ -14,7 +14,7 @@ Time: Tue Oct 23 13:50:26 CST 2018.
 Work: Rebuild directory structure, finished "kprintf" function and finished memory detected.
 
 ## How to build it?
-The maintain build frame at root directory's 'Makefile' file for this project.</br>
+The main build frame at root directory's 'Makefile' file for this project.</br>
 You can read this file to understand compilation details. The 'Makebranch' file</br>
 is only "branch" at subdirectory, it also 'makefile' file.</br>
 You can type command `make qemu` to build this project. Then you should look at the 'qemu' emulator is running.</br>
