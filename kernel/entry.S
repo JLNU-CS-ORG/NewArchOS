@@ -28,7 +28,7 @@ entry:
 relocated:
 	movl 	$0x0, %ebp
 	movl 	$(bootstacktop), %esp
-	call 	i386_init
+	call	main
 died:
 	jmp 	died
 .data 
